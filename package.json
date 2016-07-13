@@ -1,0 +1,25 @@
+{
+  "name": "sampsasaari.com",
+  "version": "1.0.0",
+  "description": "This is repository for personal site (sampsasaari.com).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samsaari/sampsasaari.com.git"
+  },
+  "author": "Sampsa Saari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samsaari/sampsasaari.com/issues"
+  },
+  "homepage": "https://github.com/samsaari/sampsasaari.com#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2"
+  }
+}

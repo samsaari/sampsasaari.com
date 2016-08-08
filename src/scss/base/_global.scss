@@ -1,4 +1,13 @@
+html {
+  font-family: "Lato", sans-serif;
+}
+
 .section-title {
   margin-top: 80px;
   text-align: center;
+
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
 }

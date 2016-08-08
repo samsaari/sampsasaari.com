@@ -1,98 +1,104 @@
 //Colors
 $white: #ffffff;
+$social: rgba(#ffffff, 0.75);
 $dark-grey: #303030;
 $dark: #2a2a2a;
-
+$hover: rgba(#ffffff, 0.40);
 
 //Navigation
 #nav {
-  @include outer-container;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  overflow: hidden;
-  background-color: transparent;
-  text-align: right;
+    @include outer-container;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: right;
 }
-
 #mobile-menu {
-  display: none;
-}
-
-ul.navbar {
-  @include span-columns(12);
-  float: right;
-  text-align: right;
-
-  li {
-    list-style-type: none;
-    display: inline-block;
-  }
-
-  li a {
-    float: left;
-    color: $white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
-
-    a:hover {
-      border-bottom: 2px solid $white;
-      }
-  }
-}
-
-
-@media only screen and (max-width : 640px) {
-  ul.navbar {
     display: none;
-  }
-
-  ul li, li a {
-    width: 100%;
-  }
-
-  #mobile-menu {
-    display: block;
-    position: relative;
+}
+ul.navbar {
+    @include span-columns(12);
     float: right;
-    z-index: 999;
-    font-size: 4.0rem;
-    color: $white;
-    text-decoration: none;
-    margin-right: 15px;
-    margin-top: -10px;
-  }
+    text-align: right;
 
-  #nav.responsive {
-    background-color: $dark-grey;
-  }
+    a {
+        font-size: 0.8rem;
+        color: $white;
+        transition: 0.6s;
+    }
+    :hover {
+        color: $hover;
+    }
+    a .social {
+        font-size: 1.0rem;
+        color: $social;
+        margin-right: 0px;
+    }
+    a .social:hover {
+      color: $hover;
+      transition: 0.6s;
+    }
 
-  ul.navbar.responsive {
-    background-color: $dark-grey;
-    position: relative;
-    display: block;
-    height: auto;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
+    li {
+        list-style-type: none;
+        display: inline-block;
+    }
+    li a {
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: 0.6s;
+    }
+}
+//Media Queries
+@media only screen and (max-width : 640px) {
+    ul.navbar {
+        display: none;
+    }
+    li a,
+    ul li {
+        width: 100%;
+    }
+    #mobile-menu {
+        display: block;
+        position: relative;
+        float: right;
+        z-index: 999;
+        font-size: 2.5rem;
+        color: $white;
+        text-decoration: none;
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+    #nav.responsive {
+        background-color: $dark-grey;
+    }
+    ul.navbar.responsive {
+        background-color: $dark-grey;
+        position: relative;
+        display: block;
+        height: auto;
+        text-align: center;
+        margin: 0;
+        padding: 0;
 
-  ul.navbar.responsive #mobile-menu {
-
-  }
-
-  ul.navbar.responsive li {
-    float: left;
-    text-align: center;
-  }
-
-  ul.navbar.responsive li a {
-    font-size: 1.2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid $dark;
-  }
+        a .social {
+            font-size: 1.8rem;
+            color: $social;
+        }
+    }
+    ul.navbar.responsive #mobile-menu {}
+    ul.navbar.responsive li {
+        float: left;
+        text-align: center;
+    }
+    ul.navbar.responsive li a {
+        font-size: 1.2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $dark;
+    }
 }

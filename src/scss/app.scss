@@ -1,10 +1,15 @@
+/*! Personal homepage
+ * @author Sampsa Saari
+ * @site http://www.sampsasaari.com
+ */
+
 @import "libraries/bourbon/bourbon";
 @import "grid-settings";
 @import "libraries/neat/neat";
-@import "libraries/hamburgers/hamburgers";
 
 @import "base/normalize";
 @import "base/global";
+@import "libraries/hamburgers/hamburgers";
 
 @import "components/intro";
 @import "components/nav";

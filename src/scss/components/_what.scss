@@ -11,6 +11,7 @@
 
 .bullets {
   $base-line-height: 1.5em !default;
+  $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
   $icon-bullet-size: 7.5em;
 
@@ -55,7 +56,6 @@
   p {
     color: $base-font-color;
     line-height: $base-line-height;
-    text-align: left;
   }
 
   img {

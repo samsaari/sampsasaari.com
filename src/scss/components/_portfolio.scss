@@ -1,17 +1,12 @@
-
+#portfolio {
+  @include outer-container;
+}
 .cards {
   margin-top: 4em;
   margin-bottom: 10em;
-  padding-left: 5em;
-  padding-right: 5em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  @media only screen and (max-width : 1000px) {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
 }
 
 .card {
@@ -47,9 +42,8 @@
   }
 
   .card-image {
-    //background-color: $card-image-hover-color;
-    height: 200px;
-    max-height: 200px;
+    height: 180px;
+    max-height: 180px;
     overflow: hidden;
 
     img {
@@ -91,11 +85,4 @@
     }
   }
 
-  &:active {
-    background-color: $card-background;
-
-    .card-header {
-      background-color: $card-background;
-    }
-  }
 }

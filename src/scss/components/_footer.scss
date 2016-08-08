@@ -40,7 +40,6 @@
     text-decoration: none;
     font-size: 0.9em;
 
-    &:focus,
     &:hover {
       color: transparentize($footer-color, 0);
       transition: 0.6s;

@@ -23,7 +23,6 @@
   overflow: auto;
   padding: 0;
 
-
   .bullet {
     flex-basis: 20em;
     flex-grow: 1;
@@ -31,6 +30,7 @@
 
   .bullet-icon {
     margin: 0 auto;
+    border-radius: 50%;
     height: $icon-bullet-size;
     padding: $icon-bullet-size / 6;
     width: $icon-bullet-size;

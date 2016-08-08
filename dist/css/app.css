@@ -591,7 +591,8 @@ ul.navbar {
     list-style: none; }
   .bullets p {
     color: #333;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    text-align: left; }
   .bullets img {
     max-width: 100%; }
 

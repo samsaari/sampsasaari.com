@@ -3,7 +3,8 @@ $(function() {
   var cache = {
     $mobileMenu: $('#mobile-menu'),
     $navbar: $('.navbar'),
-    $nav: $('#nav')
+    $nav: $('#nav'),
+    $hamburger: $('.hamburger')
 
   };
 
@@ -18,9 +19,8 @@ $(function() {
 
         cache.$nav.toggleClass('responsive');
         cache.$navbar.toggleClass('responsive');
+        cache.$hamburger.toggleClass('is-active');
 
-        cache.$mobileMenu.find('i').toggleClass('fa-times fa-bars');
-  
         return false;
 
       });

@@ -4,6 +4,81 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 40px;
+  height: 21px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -1.5px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -9px; }
+  .hamburger-inner::after {
+    bottom: -9px; }
+
+/*
+   * Spin
+   */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--spin .hamburger-inner::before {
+    transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in; }
+  .hamburger--spin .hamburger-inner::after {
+    transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.14s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--spin.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out; }
+  .hamburger--spin.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -515,12 +590,6 @@ ul.navbar {
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #2a2a2a; } }
 
-#about {
-  width: 100%;
-  background-color: #f9f9f9;
-  background-size: cover;
-  overflow: hidden; }
-
 .container {
   max-width: 75em;
   margin-left: auto;
@@ -555,6 +624,12 @@ ul.navbar {
     .about-text {
       padding-left: 2.5em;
       padding-right: 2.5em; } }
+
+#what {
+  width: 100%;
+  background-color: #f9f9f9;
+  background-size: cover;
+  overflow: hidden; }
 
 .bullets {
   display: flex;
@@ -667,26 +742,27 @@ ul.navbar {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 1.5em; }
-  .footer .fa {
-    font-size: 1.6em; }
   .footer ul {
     flex-basis: 13em;
     flex-shrink: 0;
     margin-bottom: 3em;
     padding: 0; }
   .footer li {
+    color: rgba(255, 255, 255, 0.4);
     margin-bottom: 15px;
-    line-height: 1.5em;
+    line-height: 1.2em;
     list-style: none;
     text-align: center; }
   .footer li a {
     color: rgba(255, 255, 255, 0.4);
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 0.9em; }
     .footer li a:focus, .footer li a:hover {
-      color: white; }
+      color: white;
+      transition: 0.6s; }
   .footer li h3 {
     color: white;
-    font-size: 1em;
+    font-size: 0.8em;
     margin-bottom: 0.4em; }
   .footer hr {
     border: 1px solid rgba(255, 255, 255, 0.1);
